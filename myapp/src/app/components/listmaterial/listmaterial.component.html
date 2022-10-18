@@ -1,0 +1,114 @@
+
+ 
+<mat-toolbar>
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened" >
+            close
+        </mat-icon>
+    </button>
+    <button class="animated-button1 button" routerLink="/Home">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+     Log out 
+    </button>
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav  #sidenav = "matSidenav">
+        <img class="avatar mat-elevattion-z8 " src="./assets/image4.jpg" alt="img_profil" width="80px" height="100px"/>
+        <h4 class="name">Racha Ghariani</h4>
+        <p class="designation">Gestion de stock</p>
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-button" routerLink="/Home">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        
+        <button mat-button class="menu-button" routerLink="/">
+            <mat-icon>archive</mat-icon>
+            <span>List Of Material</span>
+        </button>
+      
+        <button mat-button class="menu-button" routerLink="/Contact">
+            <mat-icon> contacts</mat-icon>
+            <span>Contact</span>
+        </button>
+        <mat-divider></mat-divider>
+        
+        <button mat-button class="menu-button">
+            <mat-icon>help</mat-icon>
+            <span>Helps</span>
+        </button>
+    </mat-sidenav>
+   
+    <mat-sidenav-content>
+        <div class="container mt-5">
+            <!-- <div class="filtres">
+                <select class="form-select form-select-sm">
+                    <option selected>Open this select menu </option>
+                    <option value="1">Smart Watch</option>
+                    <option value="2">Tablette</option>
+                    <option value="4">Telephone</option>
+                    <option value="5">Air Pods </option>
+                    <option value="6">PC</option>
+                    <option value="7">EcronPc</option>
+                    <option value="8">souris </option>
+                    <option value="9">Clavier</option>
+                    <option value="10">baffle</option>
+                    <option value="11">Ecouteurs </option>
+                  </select>
+            </div> -->
+
+            <div class="raw"> 
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="deco">
+                            <span><div class="titre">List of Material</div> </span>
+                            <button class="btn btn-secondary" routerLink="/createMaterial">Add Material</button>
+                        </div>
+                            <table class="table  table-striped mt-4">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Types</th>
+                                    <th scope="col">Name Material</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col"></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                        <tr *ngFor="let material of listMt" >   
+                                          <th>{{material.Types}}</th>
+                                          <td>{{material.NameMaterial}}</td>
+                                          <td>{{material.quantity}}</td>
+                                          <td>{{material.price | currency: 'USD'}}</td>
+                                          <td> <i [routerLink]="['/editmaterial',material._id]" class="fa-solid fa-pen text-primary"></i>
+                                              <i  (click)="delMaterial(material._id)" class="fa-solid fa-trash-can text-danger"></i>
+                                              <i [routerLink]="['/detailsmaterial',material._id]" class="fa-solid fa-circle-info"></i></td>
+                                        </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <!-- <div class = "content mat-elevation-z4">
+          
+        </div> -->
+        <hr style="margin-top:325px"/>
+        <footer style="padding-top:15px;display:flex;justify-content: center; font-size:16px;">
+            <p> Copyright &copy; 2022 Racha Ghariani - all reproduction prohibited</p>
+        </footer>
+    </mat-sidenav-content>
+   
+
+</mat-sidenav-container>

@@ -1,0 +1,52 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <span class="title">{{titre}}</span>
+                <form class="mt-4" [formGroup]="MaterialForm" (ngSubmit)="aggregatematerial()">
+
+                        <div class="mb-4">
+                            <input type="text" formControlName="Types"
+                            class="form-control form-control-lg"  placeholder="Types">
+                            <div class="text-danger" *ngIf="MaterialForm.get('Types')?.hasError('required')&& MaterialForm.get('Types')?.touched">
+                                <span>error Types is empty</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <input type="text" formControlName="NameMaterial"
+                            class="form-control form-control-lg"  placeholder="Name Material">
+                            <div class="text-danger" *ngIf="MaterialForm.get('NameMaterial')?.hasError('required')&& MaterialForm.get('NameMaterial')?.touched">
+                                <span>error Name Material is empty</span>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <input type="number" formControlName="quantity"
+                            class="form-control form-control-lg"  placeholder="quantity">
+                            <div class="text-danger" *ngIf="MaterialForm.get('quantity')?.hasError('required')&& MaterialForm.get('quantity')?.touched">
+                                <span>error quantite is empty </span>
+        
+                            </div>
+                        </div>
+
+                         <div class="mb-4">
+                          <input type="number" formControlName="price"
+                            class="form-control form-control-lg"  placeholder="price">
+                           <div class="text-danger" *ngIf="MaterialForm.get('price')?.hasError('required')&& MaterialForm.get('price')?.touched">
+                             <span>error Price is empty </span>
+                         </div>
+                  
+                   <div class="mb-3">
+                      <div class="decal">
+                        <button  type="submit"  [disabled]="MaterialForm.invalid" class="btn btn-info btn-lg">Submit</button>
+                        <button  routerLink="/"class="btn btn-secondary btn-lg ">return</button>
+                      </div>
+                   </div>
+            </div>  
+        </form>
+                   
+        </div>
+        </div>
+    </div>
+</div>
+</div>

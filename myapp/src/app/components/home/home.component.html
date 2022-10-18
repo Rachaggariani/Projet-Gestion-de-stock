@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  
+</head> 
+ <body>
+    <div class="containers">
+        <div class="left-container">
+            <div class="logo">
+                <div><img src="./assets/logos-takolor-horizontal-gris1.png" width="180px"/></div>
+              
+                </div>
+            <div class="info"><a href="">question</a></div>
+        </div>
+        <div class="right-container">
+            <div class="first-block"></div>
+            <div class="menu-container">
+               <div class="menu " (click)="show()" >
+                    <span class="mt" *ngIf="edited" class="spanaff" routerLink="/connecter">
+                     Connect
+                    </span>
+              <span class="mt" *ngIf="edited" class="spanaff" routerLink="/About">
+                     About
+            </span>
+                </div>
+            </div>
+          <div class="story">
+            <h1>Our story</h1>
+            <p>Pour plus d'information  sur ce project visiter la page about  </p>
+          </div> 
+          <div class="social-container">
+            <li class="social">
+                <ul><a href="https://www.facebook.com/TakolorInternational/"><i class="fa-brands fa-facebook text-primary"></i></a>Facebook</ul>
+                <ul><a href="https://www.instagram.com/takolorinternational/?hl=fr"><i class="fa-brands fa-square-instagram "></i></a>Instagram</ul>
+                <ul><a href="https://twitter.com/takolor_inter"><i class="fa-brands fa-twitter text-info"></i></a>Twitter</ul>
+                <ul><a href="https://www.linkedin.com/company/takolor-international"><i class="fa-brands fa-linkedin cl"></i></a>LinkdIn</ul>
+            </li>
+          </div>
+        </div>
+        <div class="center-container">
+
+        </div>
+    </div>
+  
+             
+      
+    
+
+</body>
+</html>

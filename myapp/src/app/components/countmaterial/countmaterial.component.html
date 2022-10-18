@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="mt-sm-4">
+      <!-- style="width: 18rem;padding-top: 10px;margin-top: 200px;margin-left: 500px;" -->
+      <div class="card" >
+         <div class="card-body">
+      <h5  class="card-title"></h5>
+        <ul class="list">
+              <li class="listgroup">Types:<span class="fw-bold">{{detailM.Types}}</span></li>
+              <li class="listgroup">Name Material:<span class="fw-bold"> {{detailM.NameMaterial}}</span></li>
+              <li class="listgroup">Quantity:<span class="fw-bold"> {{detailM.quantity}}</span></li>
+              <li class="listgroup">Price:<span class="fw-bold"> {{detailM.price}}</span></li>
+        </ul>
+      </div>
+    <br/> 
+    <div>
+    <i (click)="countp()"  class="fa-solid fa-plus"></i>
+    {{compter}}
+    <i  (click)="countm()"  class="fa-solid fa-minus"></i>
+</div>
+      <a  class="btn btn-primary" routerLink="/" style="width: 90px;margin-left: 196px;">Back</a>
+    </div>
+  
+  </div>
+
+</div>
+
+<!-- <hr/> -->
+<!-- <footer style="padding-top:18px;display:flex;justify-content:center; font-size:16px;">
+    <p>Copyright &copy; 2022 Racha Ghariani - all reproduction prohibited</p>
+</footer> -->
+
+</div>
+</body>
+</html>
